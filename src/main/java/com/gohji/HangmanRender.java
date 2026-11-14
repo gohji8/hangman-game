@@ -74,7 +74,7 @@ public class HangmanRender {
 """
     };
 
-    public static void render(int image) {
+    public static void render(int image){
         System.out.println(IMAGE_HANGMAN[image]);
     }
 }
