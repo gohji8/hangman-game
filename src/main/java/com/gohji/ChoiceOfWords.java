@@ -10,14 +10,14 @@ import java.util.Random;
 public class ChoiceOfWords {
     private static final List<String> words = new ArrayList<>();
 
-    private static void readFile() { //todo для пути глянуть ClassLoader
+    private static void readFile() {
         try (BufferedReader reader = new BufferedReader(new FileReader("src\\main\\resources\\words.txt"))) {
             String word;
             while ((word = reader.readLine()) != null) {
                 words.add(word);
             }
-        } catch (IOException exception) {
-            System.out.println(exception.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -27,5 +27,4 @@ public class ChoiceOfWords {
         int index = random.nextInt(words.size());
         return words.get(index);
     }
-
 }
